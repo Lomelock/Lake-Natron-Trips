@@ -152,6 +152,101 @@
       position: relative;
       z-index: 2;
     }
+    /* Slideshow styles */
+    .slideshow-container {
+      position: relative;
+      max-width: 700px;
+      margin: 2rem auto 2.5rem auto;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(217,119,6,0.13);
+      background: #fff7ed;
+    }
+    .slide-img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      display: none;
+      transition: opacity 0.6s;
+    }
+    .slide-img.active {
+      display: block;
+      opacity: 1;
+    }
+    .slide-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(0deg, rgba(0,0,0,0.45) 70%, rgba(0,0,0,0.05) 100%);
+      color: #fff;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.1rem;
+      padding: 1rem 1.5rem 1.2rem 1.5rem;
+      letter-spacing: 0.01em;
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+      min-height: 3.5rem;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .slide-controls {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    .slide-btn {
+      background: rgba(253,230,138,0.85);
+      color: #b45309;
+      border: none;
+      font-size: 2rem;
+      border-radius: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(217,119,6,0.13);
+      pointer-events: all;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.18s, color 0.18s;
+    }
+    .slide-btn:hover {
+      background: #fbbf24;
+      color: #fff;
+    }
+    .slide-dots {
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    .slide-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 4px;
+      background: #fde68a;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.2s;
+      border: 2px solid #fff;
+    }
+    .slide-dot.active {
+      background: #d97706;
+      border: 2px solid #b45309;
+    }
+    @media (max-width: 800px) {
+      .slideshow-container {
+        max-width: 98vw;
+      }
+      .slide-img {
+        height: 200px;
+      }
+    }
     @media (max-width: 600px) {
       .main-section {
         padding: 1rem 0.5rem;
@@ -179,66 +274,127 @@
   </header>
 
   <main class="max-w-6xl mx-auto mt-10 p-6">
-<section class="mb-10">
-  <h2 class="text-3xl font-bold mb-4 fancy-header text-red-600">Welcome to Natron Adventures</h2>
-  <p class="text-gray-700 text-lg">
-    Natron Adventures is your gateway to experiencing the wonders of Lake Natron, guided by locals who know its secrets and stories. From the fiery slopes of Oldoinyo Lengai to the peaceful flamingo-studded shores, we take you beyond sightseeing—into a world of connection, culture, and discovery. Our tours are grounded in respect for nature and local communities, giving you a journey that's as meaningful as it is memorable.
-  </p>
-</section>
-
-
-  <main class="main-section max-w-6xl mx-auto mt-10 p-6">
-    <h2 class="text-3xl font-bold mb-4 fancy-header">Discover Local Adventure Packages</h2>
-    <p class="mb-10">We offer unique guided experiences designed to showcase the natural beauty and cultural richness of Lake Natron. Explore our sample packages below and click "Read More" to dive into full activity details.</p>
-
-    <section class="packages-bg">
-      <div class="packages-content grid md:grid-cols-2 gap-10">
-        <div class="activity-card" style="background: url('IMG-20250316-WA0015.jpg') center center/cover no-repeat;">
-          <div class="card-bg"></div>
-          <h3 class="activity-title">Volcano Sunrise Trek</h3>
-          <p class="activity-description">Start the night hiking Oldoinyo Lengai and reach the summit at dawn. A sacred mountain offering the most stunning sunrise and panoramic views.</p>
-          <a href="activities.html#lengai" class="readmore-btn">Read more</a>
-        </div>
-        <div class="activity-card" style="background: url('IMG-20250316-WA0021.jpg') center center/cover no-repeat;">
-          <div class="card-bg"></div>
-          <h3 class="activity-title">Hidden Waterfalls Escape</h3>
-          <p class="activity-description">Take a scenic walk to Ngare Sero gorge. Enjoy its refreshing falls, natural pools, and an unexpected burst of green in the desert.</p>
-          <a href="activities.html#waterfalls" class="readmore-btn">Read more</a>
-        </div>
-        <div class="activity-card" style="background: url('IMG-20250316-WA0013.jpg') center center/cover no-repeat;">
-          <div class="card-bg"></div>
-          <h3 class="activity-title">Flamingo & Lake Tour</h3>
-          <p class="activity-description">Wander along the shores of Lake Natron where flamingos breed and salt flats reflect the sky. Ideal for nature lovers and photographers.</p>
-          <a href="activities.html#flamingo" class="readmore-btn">Read more</a>
-        </div>
-        <div class="activity-card" style="background: url('IMG-20250316-WA0024.jpg') center center/cover no-repeat;">
-          <div class="card-bg"></div>
-          <h3 class="activity-title">Real Maasai Experience</h3>
-          <p class="activity-description">Visit a Maasai village guided by a community member. Hear stories, witness traditions, and be welcomed into a rich and proud culture.</p>
-          <a href="activities.html#maasai" class="readmore-btn">Read more</a>
-        </div>
-        <div class="activity-card" style="background: url('images/footprints.jpg') center center/cover no-repeat;">
-          <div class="card-bg"></div>
-          <h3 class="activity-title">Footprints of the Past</h3>
-          <p class="activity-description">Explore the Laetoli area, home to the world-famous hominid footprints preserved in volcanic ash. These 3.6 million-year-old tracks offer a rare and direct connection to early human ancestors. A local guide explains the scientific and historical importance of these discoveries while you walk near this ancient site.</p>
-          <a href="activities.html#footprints" class="readmore-btn">Read more</a>
-        </div>
-        <div class="activity-card" style="background: url('IMG-20250316-WA0022.jpg') center center/cover no-repeat;">
-          <div class="card-bg"></div>
-          <h3 class="activity-title">Maasai Homestay Cultural Tour</h3>
-          <p class="activity-description">Live among the Maasai for a day or more. Share meals, join daily routines, and sleep in traditional houses. This immersive homestay experience is guided respectfully by the local community to ensure a deep, respectful cultural exchange unlike any other.</p>
-          <a href="activities.html#homestay" class="readmore-btn">Read more</a>
-        </div>
-      </div>
+    <section class="mb-10">
+      <h2 class="text-3xl font-bold mb-4 fancy-header text-red-600">Welcome to Natron Adventures</h2>
+      <p class="text-gray-700 text-lg">
+        Natron Adventures is your gateway to experiencing the wonders of Lake Natron, guided by locals who know its secrets and stories. From the fiery slopes of Oldoinyo Lengai to the peaceful flamingo-studded shores, we take you beyond sightseeing—into a world of connection, culture, and discovery. Our tours are grounded in respect for nature and local communities, giving you a journey that's as meaningful as it is memorable.
+      </p>
     </section>
 
-    <div class="mt-10 text-center">
-      <a href="activities.html" class="btn-main">View Full Activity Details</a>
-    </div>
-  </main>
+    <!-- Slideshow Section -->
+    <section style="position:relative; border-radius:18px; overflow:hidden; margin-bottom:2.5rem; box-shadow:0 4px 24px rgba(217,119,6,0.13);">
+      <img src="Screenshot (131).png" alt="Slideshow Background" class="slideshow-bg">
+      <figure class="slideshow-container" style="background:transparent; box-shadow:none; position:relative; z-index:1;">
+        <img src="Screenshot (128).png" alt="Oldoinyo Lengai Sunrise" class="slide-img active">
+        <img src="Screenshot (134).png" alt="Ngare Sero Waterfalls" class="slide-img">
+        <img src="IMG-20250316-WA0013.jpg" alt="Lake Natron Flamingos" class="slide-img">
+        <img src="IMG-20250316-WA0024.jpg" alt="Maasai Culture" class="slide-img">
+        <figcaption class="slide-caption">Oldoinyo Lengai at sunrise – the sacred mountain of the Maasai.</figcaption>
+        <div class="slide-controls">
+          <button class="slide-btn" id="slide-prev" aria-label="Previous slide">&#10094;</button>
+          <button class="slide-btn" id="slide-next" aria-label="Next slide">&#10095;</button>
+        </div>
+        <div class="slide-dots">
+          <span class="slide-dot active"></span>
+          <span class="slide-dot"></span>
+          <span class="slide-dot"></span>
+          <span class="slide-dot"></span>
+        </div>
+      </figure>
+    </section>
+    <script>
+      // Slideshow JS
+      const slides = document.querySelectorAll('.slide-img');
+      const captions = [
+        "Oldoinyo Lengai at sunrise – the sacred mountain of the Maasai.",
+        "Ngare Sero gorge – hidden waterfalls and lush pools.",
+        "Lake Natron – flamingo paradise and surreal salt flats.",
+        "Experience Maasai culture and hospitality."
+      ];
+      const captionElem = document.querySelector('.slide-caption');
+      const dots = document.querySelectorAll('.slide-dot');
+      let current = 0;
+      let slideInterval = null;
+      function showSlide(idx) {
+        slides.forEach((img, i) => {
+          img.classList.toggle('active', i === idx);
+        });
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === idx);
+        });
+        captionElem.textContent = captions[idx];
+        current = idx;
+      }
+      function nextSlide() {
+        showSlide((current + 1) % slides.length);
+      }
+      function prevSlide() {
+        showSlide((current + slides.length - 1) % slides.length);
+      }
+      function startAutoSlide() {
+        if (slideInterval) clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, 4000);
+      }
+      document.getElementById('slide-prev').onclick = () => { prevSlide(); startAutoSlide(); };
+      document.getElementById('slide-next').onclick = () => { nextSlide(); startAutoSlide(); };
+      dots.forEach((dot, i) => {
+        dot.onclick = () => { showSlide(i); startAutoSlide(); };
+      });
+      startAutoSlide();
+    </script>
 
-  <footer class="mt-10 p-4 text-center">
-    <p>© 2025 Natron Adventures | <a href="https://hiswixsite.com" class="underline">Visit Guesthouse</a></p>
-  </footer>
-</body>
+    <main class="main-section max-w-6xl mx-auto mt-10 p-6">
+      <h2 class="text-3xl font-bold mb-4 fancy-header">Discover Local Adventure Packages</h2>
+      <p class="mb-10">We offer unique guided experiences designed to showcase the natural beauty and cultural richness of Lake Natron. Explore our sample packages below and click "Read More" to dive into full activity details.</p>
+
+      <section class="packages-bg">
+        <div class="packages-content grid md:grid-cols-2 gap-10">
+          <div class="activity-card" style="background: url('IMG-20250316-WA0015.jpg') center center/cover no-repeat;">
+            <div class="card-bg"></div>
+            <h3 class="activity-title">Volcano Sunrise Trek</h3>
+            <p class="activity-description">Start the night hiking Oldoinyo Lengai and reach the summit at dawn. A sacred mountain offering the most stunning sunrise and panoramic views.</p>
+            <a href="activities.html#lengai" class="readmore-btn">Read more</a>
+          </div>
+          <div class="activity-card" style="background: url('IMG-20250316-WA0021.jpg') center center/cover no-repeat;">
+            <div class="card-bg"></div>
+            <h3 class="activity-title">Hidden Waterfalls Escape</h3>
+            <p class="activity-description">Take a scenic walk to Ngare Sero gorge. Enjoy its refreshing falls, natural pools, and an unexpected burst of green in the desert.</p>
+            <a href="activities.html#waterfalls" class="readmore-btn">Read more</a>
+          </div>
+          <div class="activity-card" style="background: url('IMG-20250316-WA0013.jpg') center center/cover no-repeat;">
+            <div class="card-bg"></div>
+            <h3 class="activity-title">Flamingo & Lake Tour</h3>
+            <p class="activity-description">Wander along the shores of Lake Natron where flamingos breed and salt flats reflect the sky. Ideal for nature lovers and photographers.</p>
+            <a href="activities.html#flamingo" class="readmore-btn">Read more</a>
+          </div>
+          <div class="activity-card" style="background: url('IMG-20250316-WA0024.jpg') center center/cover no-repeat;">
+            <div class="card-bg"></div>
+            <h3 class="activity-title">Real Maasai Experience</h3>
+            <p class="activity-description">Visit a Maasai village guided by a community member. Hear stories, witness traditions, and be welcomed into a rich and proud culture.</p>
+            <a href="activities.html#maasai" class="readmore-btn">Read more</a>
+          </div>
+          <div class="activity-card" style="background: url('images/footprints.jpg') center center/cover no-repeat;">
+            <div class="card-bg"></div>
+            <h3 class="activity-title">Footprints of the Past</h3>
+            <p class="activity-description">Explore the Laetoli area, home to the world-famous hominid footprints preserved in volcanic ash. These 3.6 million-year-old tracks offer a rare and direct connection to early human ancestors. A local guide explains the scientific and historical importance of these discoveries while you walk near this ancient site.</p>
+            <a href="activities.html#footprints" class="readmore-btn">Read more</a>
+          </div>
+          <div class="activity-card" style="background: url('IMG-20250316-WA0022.jpg') center center/cover no-repeat;">
+            <div class="card-bg"></div>
+            <h3 class="activity-title">Maasai Homestay Cultural Tour</h3>
+            <p class="activity-description">Live among the Maasai for a day or more. Share meals, join daily routines, and sleep in traditional houses. This immersive homestay experience is guided respectfully by the local community to ensure a deep, respectful cultural exchange unlike any other.</p>
+            <a href="activities.html#homestay" class="readmore-btn">Read more</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="mt-10 text-center">
+        <a href="activities.html" class="btn-main">View Full Activity Details</a>
+      </div>
+    </main>
+
+    <footer class="mt-10 p-4 text-center">
+      <p>© 2025 Natron Adventures | <a href="https://hiswixsite.com" class="underline">Visit Guesthouse</a></p>
+    </footer>
+  </body>
 </html>

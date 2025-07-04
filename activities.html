@@ -103,6 +103,40 @@
       color: #444;
       margin-bottom: 1rem;
     }
+    .activity-img-holder {
+      width: 180px;
+      height: 180px;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(217,119,6,0.13);
+      background: #fde68a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+      float: right;
+      margin-left: 2rem;
+    }
+    .activity-img-holder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      border-radius: 18px;
+    }
+    @media (max-width: 700px) {
+      .activity-img-holder {
+        width: 120px;
+        height: 120px;
+        margin-left: 1rem;
+      }
+    }
+    section:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
     @media (max-width: 600px) {
       main {
         padding: 1rem 0.5rem;
@@ -140,6 +174,9 @@
 
     <!-- Volcano Sunrise Trek -->
     <section id="lengai" class="mb-12">
+      <div class="activity-img-holder">
+        <img src="IMG-20250316-WA0015.jpg" alt="Volcano Sunrise Trek">
+      </div>
       <h2 class="text-2xl font-bold text-red-600 mb-2">Volcano Sunrise Trek</h2>
       <p class="mb-4">
         Begin your adventure with a night ascent of Oldoinyo Lengai, the only active carbonatite volcano in the world and sacred to the Maasai. The trek is challenging but rewarding, culminating at the summit just as the sun rises. From the top, enjoy breathtaking panoramic views of the Rift Valley and Lake Natron below.
@@ -154,6 +191,9 @@
 
     <!-- Hidden Waterfalls Escape -->
     <section id="waterfalls" class="mb-12">
+      <div class="activity-img-holder">
+        <img src="IMG-20250316-WA0021.jpg" alt="Hidden Waterfalls Escape">
+      </div>
       <h2 class="text-2xl font-bold text-red-600 mb-2">Hidden Waterfalls Escape</h2>
       <p class="mb-4">
         Take a scenic walk through the Ngare Sero gorge, a lush oasis in the otherwise arid landscape. The gorge features refreshing waterfalls and natural pools, perfect for a swim or relaxation. The area is unexpectedly green, providing a stark contrast to the surrounding desert.
@@ -168,6 +208,9 @@
 
     <!-- Flamingo & Lake Tour -->
     <section id="flamingo" class="mb-12">
+      <div class="activity-img-holder">
+        <img src="IMG-20250316-WA0013.jpg" alt="Flamingo & Lake Tour">
+      </div>
       <h2 class="text-2xl font-bold text-red-600 mb-2">Flamingo & Lake Tour</h2>
       <p class="mb-4">
         Explore the shores of Lake Natron, a unique soda lake famous for its large flocks of flamingos. The lake’s mineral-rich waters create striking salt flats that reflect the sky, making it a paradise for photographers and birdwatchers.
@@ -182,6 +225,9 @@
 
     <!-- Real Maasai Experience -->
     <section id="maasai" class="mb-12">
+      <div class="activity-img-holder">
+        <img src="IMG-20250316-WA0024.jpg" alt="Real Maasai Experience">
+      </div>
       <h2 class="text-2xl font-bold text-red-600 mb-2">Real Maasai Experience</h2>
       <p class="mb-4">
         Visit a traditional Maasai village, guided by a local community member. Learn about Maasai customs, hear stories, and witness daily life and rituals. This experience offers a genuine insight into the culture and traditions of one of East Africa’s most iconic peoples.
@@ -196,6 +242,9 @@
 
     <!-- Footprints of the Past -->
     <section id="footprints" class="mb-12">
+      <div class="activity-img-holder">
+        <img src="images/footprints.jpg" alt="Footprints of the Past">
+      </div>
       <h2 class="text-2xl font-bold text-red-600 mb-2">Footprints of the Past</h2>
       <p class="mb-4">
         Journey to the Laetoli area, where 3.6 million-year-old hominid footprints are preserved in volcanic ash. These ancient tracks provide a direct link to early human ancestors. A knowledgeable guide explains the scientific and historical significance of the site.
@@ -210,6 +259,9 @@
 
     <!-- Maasai Homestay Cultural Tour -->
     <section id="homestay" class="mb-12">
+      <div class="activity-img-holder">
+        <img src="IMG-20250316-WA0022.jpg" alt="Maasai Homestay Cultural Tour">
+      </div>
       <h2 class="text-2xl font-bold text-red-600 mb-2">Maasai Homestay Cultural Tour</h2>
       <p class="mb-4">
         Immerse yourself in Maasai life by staying with a local family. Participate in daily routines, share meals, and sleep in traditional Maasai houses (bomas). This respectful, community-guided experience fosters deep cultural understanding and authentic exchange.
