@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lake Natron Activities</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts for modern typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background: linear-gradient(135deg, #f8fafc 0%, #ffe5e0 100%);
+      color: #222;
+      margin: 0;
+      min-height: 100vh;
+    }
+    header {
+      background: #fff7ed;
+      box-shadow: 0 2px 8px rgba(217,119,6,0.06);
+      padding: 1.5rem 0;
+    }
+    .header-container {
+      max-width: 96rem;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: #d97706;
+      margin: 0;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+    }
+    nav a {
+      color: #d97706;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 500;
+      margin: 0 0.7rem;
+      transition: color 0.2s;
+      text-decoration: none;
+      font-size: 1.08rem;
+      border-radius: 4px;
+      padding: 0.15rem 0.5rem;
+      display: inline-block;
+    }
+    nav a:hover, nav a.active, nav a.font-bold {
+      color: #b45309;
+      text-decoration: underline;
+      background: #fde68a;
+    }
+    main {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.09), 0 1.5px 4px rgba(255, 99, 71, 0.08);
+      padding: 2.5rem 2rem;
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      letter-spacing: 0.02em;
+      color: #e63946;
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #e63946 60%, #f1faee 100%);
+      border-radius: 2px;
+      margin-top: 0.3rem;
+    }
+    section {
+      transition: box-shadow 0.2s;
+      padding: 1.5rem 1rem 1.5rem 1rem;
+      border-radius: 12px;
+      margin-bottom: 2.5rem;
+      background: rgba(255,255,255,0.95);
+      box-shadow: 0 2px 12px rgba(230,57,70,0.06);
+    }
+    section:hover {
+      box-shadow: 0 8px 32px rgba(230,57,70,0.13);
+      background: #fff7f6;
+    }
+    ul {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    ul li {
+      margin-bottom: 0.4rem;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      padding-left: 0.2rem;
+    }
+    p {
+      font-size: 1.08rem;
+      color: #444;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 600px) {
+      main {
+        padding: 1rem 0.5rem;
+      }
+      section {
+        padding: 1rem 0.5rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+    footer {
+      background: #f1faee;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #222;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>Natron Adventures</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="activities.html" class="active">Activities</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="max-w-4xl mx-auto mt-10 p-6">
+
+    <!-- Volcano Sunrise Trek -->
+    <section id="lengai" class="mb-12">
+      <h2 class="text-2xl font-bold text-red-600 mb-2">Volcano Sunrise Trek</h2>
+      <p class="mb-4">
+        Begin your adventure with a night ascent of Oldoinyo Lengai, the only active carbonatite volcano in the world and sacred to the Maasai. The trek is challenging but rewarding, culminating at the summit just as the sun rises. From the top, enjoy breathtaking panoramic views of the Rift Valley and Lake Natron below.
+      </p>
+      <ul class="list-disc ml-6 mb-2">
+        <li>Nighttime ascent for cooler temperatures</li>
+        <li>Stunning sunrise at the summit</li>
+        <li>Unique volcanic landscape</li>
+        <li>Cultural significance to the Maasai</li>
+      </ul>
+    </section>
+
+    <!-- Hidden Waterfalls Escape -->
+    <section id="waterfalls" class="mb-12">
+      <h2 class="text-2xl font-bold text-red-600 mb-2">Hidden Waterfalls Escape</h2>
+      <p class="mb-4">
+        Take a scenic walk through the Ngare Sero gorge, a lush oasis in the otherwise arid landscape. The gorge features refreshing waterfalls and natural pools, perfect for a swim or relaxation. The area is unexpectedly green, providing a stark contrast to the surrounding desert.
+      </p>
+      <ul class="list-disc ml-6 mb-2">
+        <li>Guided walk through a dramatic gorge</li>
+        <li>Swimming in natural pools</li>
+        <li>Lush vegetation and birdlife</li>
+        <li>Ideal for families and nature lovers</li>
+      </ul>
+    </section>
+
+    <!-- Flamingo & Lake Tour -->
+    <section id="flamingo" class="mb-12">
+      <h2 class="text-2xl font-bold text-red-600 mb-2">Flamingo & Lake Tour</h2>
+      <p class="mb-4">
+        Explore the shores of Lake Natron, a unique soda lake famous for its large flocks of flamingos. The lake’s mineral-rich waters create striking salt flats that reflect the sky, making it a paradise for photographers and birdwatchers.
+      </p>
+      <ul class="list-disc ml-6 mb-2">
+        <li>Flamingo breeding grounds</li>
+        <li>Salt flats and surreal landscapes</li>
+        <li>Birdwatching opportunities</li>
+        <li>Photography spots</li>
+      </ul>
+    </section>
+
+    <!-- Real Maasai Experience -->
+    <section id="maasai" class="mb-12">
+      <h2 class="text-2xl font-bold text-red-600 mb-2">Real Maasai Experience</h2>
+      <p class="mb-4">
+        Visit a traditional Maasai village, guided by a local community member. Learn about Maasai customs, hear stories, and witness daily life and rituals. This experience offers a genuine insight into the culture and traditions of one of East Africa’s most iconic peoples.
+      </p>
+      <ul class="list-disc ml-6 mb-2">
+        <li>Guided village tour</li>
+        <li>Storytelling and cultural exchange</li>
+        <li>Traditional dances and crafts</li>
+        <li>Support for local communities</li>
+      </ul>
+    </section>
+
+    <!-- Footprints of the Past -->
+    <section id="footprints" class="mb-12">
+      <h2 class="text-2xl font-bold text-red-600 mb-2">Footprints of the Past</h2>
+      <p class="mb-4">
+        Journey to the Laetoli area, where 3.6 million-year-old hominid footprints are preserved in volcanic ash. These ancient tracks provide a direct link to early human ancestors. A knowledgeable guide explains the scientific and historical significance of the site.
+      </p>
+      <ul class="list-disc ml-6 mb-2">
+        <li>Visit to a world-famous archaeological site</li>
+        <li>Learn about human evolution</li>
+        <li>Guided interpretation of the footprints</li>
+        <li>Connection to Tanzania’s prehistoric heritage</li>
+      </ul>
+    </section>
+
+    <!-- Maasai Homestay Cultural Tour -->
+    <section id="homestay" class="mb-12">
+      <h2 class="text-2xl font-bold text-red-600 mb-2">Maasai Homestay Cultural Tour</h2>
+      <p class="mb-4">
+        Immerse yourself in Maasai life by staying with a local family. Participate in daily routines, share meals, and sleep in traditional Maasai houses (bomas). This respectful, community-guided experience fosters deep cultural understanding and authentic exchange.
+      </p>
+      <ul class="list-disc ml-6 mb-2">
+        <li>Overnight stay in a Maasai boma</li>
+        <li>Hands-on participation in daily life</li>
+        <li>Shared meals and storytelling</li>
+        <li>Responsible, community-guided tourism</li>
+      </ul>
+    </section>
+
+  </main>
+  <footer class="mt-10 p-4 text-center">
+    <p>© 2025 Natron Adventures | <a href="https://hiswixsite.com" class="underline">Visit Guesthouse</a></p>
+  </footer>
+</body>
+</html>
