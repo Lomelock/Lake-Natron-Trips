@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Natron Adventures</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .contact-title {
+      font-family: 'Georgia', serif;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .contact-label {
+      font-family: 'Verdana', sans-serif;
+      font-weight: 600;
+    }
+    .contact-input, .contact-textarea {
+      font-family: 'Verdana', sans-serif;
+    }
+    header {
+      background: #fff7ed;
+      box-shadow: 0 2px 8px rgba(217,119,6,0.06);
+      padding: 1.5rem 0;
+    }
+    .header-container {
+      max-width: 96rem;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: #d97706;
+      margin: 0;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+    }
+    nav a {
+      color: #d97706;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 500;
+      margin: 0 0.7rem;
+      transition: color 0.2s;
+      text-decoration: none;
+      font-size: 1.08rem;
+      border-radius: 4px;
+      padding: 0.15rem 0.5rem;
+      display: inline-block;
+    }
+    nav a:hover, nav a.active, nav a.font-bold {
+      color: #b45309;
+      text-decoration: underline;
+      background: #fde68a;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <header>
+    <div class="header-container">
+      <h1>Natron Adventures</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="activities.html">Activities</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto mt-10 p-6">
+    <h2 class="contact-title text-red-600 mb-6">Get in Touch</h2>
+
+    <div class="mb-8 text-lg text-gray-700">
+      <p><strong>Email:</strong> natron.adventures@gmail.com</p>
+      <p><strong>Mobile:</strong> +255 755 123 456</p>
+    </div>
+
+    <form class="space-y-6">
+      <div>
+        <label class="contact-label block mb-2">Name</label>
+        <input type="text" class="contact-input w-full border border-gray-300 p-2 rounded" placeholder="Your Name">
+      </div>
+
+      <div>
+        <label class="contact-label block mb-2">Email</label>
+        <input type="email" class="contact-input w-full border border-gray-300 p-2 rounded" placeholder="you@example.com">
+      </div>
+
+      <div>
+        <label class="contact-label block mb-2">Message</label>
+        <textarea rows="5" class="contact-textarea w-full border border-gray-300 p-2 rounded" placeholder="Write your message..."></textarea>
+      </div>
+
+      <button type="submit" class="bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600">Send Message</button>
+    </form>
+  </main>
+
+  <footer class="bg-gray-100 mt-10 p-4 text-center">
+    <p>© 2025 Natron Adventures | <a href="index.html" class="underline">Back to Home</a></p>
+  </footer>
+</body>
+</html>
