@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lake Natron Trips Cost</title>
+  <!-- Google Fonts for modern typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+ <link rel="icon" type="image/png" href="Natron adventures logo.png" />
+
+ <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background: linear-gradient(135deg, #f8fafc 0%, #ffe5e0 100%);
+      color: #222;
+      margin: 0;
+      min-height: 100vh;
+      padding: 0;
+    }
+    header {
+      background: #fff7ed;
+      box-shadow: 0 2px 8px rgba(217,119,6,0.06);
+      padding: 1.5rem 0;
+    }
+    .header-container {
+      max-width: 96rem;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: #d97706;
+      margin: 0;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+    }
+    nav a {
+      color: #d97706;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 500;
+      margin: 0 0.7rem;
+      transition: color 0.2s;
+      text-decoration: none;
+      font-size: 1.08rem;
+      border-radius: 4px;
+      padding: 0.15rem 0.5rem;
+      display: inline-block;
+    }
+    nav a:hover, nav a.active, nav a.font-bold {
+      color: #b45309;
+      text-decoration: underline;
+      background: #fde68a;
+    }
+    .main-section {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.09), 0 1.5px 4px rgba(217,119,6,0.08);
+      padding: 2.5rem 2rem;
+      margin: 2.5rem auto;
+      max-width: 700px;
+    }
+    .main-section h2 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #d97706;
+      margin-bottom: 1.2rem;
+      text-align: center;
+      letter-spacing: 0.01em;
+      position: relative;
+    }
+    .main-section h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #d97706 60%, #f1faee 100%);
+      border-radius: 2px;
+      margin: 0.5rem auto 0 auto;
+    }
+    .main-section p {
+      font-size: 1.08rem;
+      color: #444;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+    .price-table {
+      background: rgba(255,255,255,0.97);
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(217,119,6,0.06);
+      padding: 2rem 1.5rem;
+      margin: 0 auto 2.5rem auto;
+      max-width: 700px;
+      transition: box-shadow 0.2s, background 0.2s;
+    }
+    .price-table:hover {
+      box-shadow: 0 8px 32px rgba(217,119,6,0.13);
+      background: #fff7ed;
+    }
+    .price-table h2 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.5rem;
+      color: #d97706;
+      margin-bottom: 1.2rem;
+      text-align: center;
+      font-weight: bold;
+      letter-spacing: 0.01em;
+      position: relative;
+    }
+    .price-table h2::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 2.5px;
+      background: linear-gradient(90deg, #d97706 60%, #f1faee 100%);
+      border-radius: 2px;
+      margin: 0.5rem auto 0 auto;
+    }
+    .section-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1.15em;
+      margin-top: 1.5rem;
+      color: #b45309;
+      border-bottom: 2px solid #d97706;
+      padding-bottom: 5px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+    .price-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+    .price-list li {
+      padding: 10px 0;
+      border-bottom: 1px dashed #fde68a;
+      font-size: 1.08rem;
+      color: #444;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .price-list span {
+      font-weight: bold;
+      color: #d97706;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #fde68a;
+      border-radius: 6px;
+      padding: 0.2em 0.8em;
+      font-size: 1.08rem;
+      margin-left: 1rem;
+    }
+    footer {
+      background: #f1faee;
+      color: #888;
+      font-family: 'Roboto', Arial, sans-serif;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.95rem;
+      border-top: 1px solid #fde68a;
+      margin-top: 2rem;
+    }
+    @media (max-width: 700px) {
+      .main-section, .price-table {
+        padding: 1rem 0.5rem;
+        max-width: 98vw;
+      }
+      .main-section h2, .price-table h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>Natron Adventures</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="activities.html">Activities</a>
+        <a href="About.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="price.html" class="active">Prices</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-section">
+    <h2>Trip Costs Overview</h2>
+    <p>Explore the costs associated with our Lake Natron trips, including activities, entry fees, and conservation contributions.</p>
+  </main>
+
+  <div class="price-table">
+    <h2>Lake Natron Trips – Cost Breakdown</h2>
+
+    <div>
+      <div class="section-title">Activities</div>
+      <ul class="price-list">
+        <li>Waterfall Gorge, Lake Shore & Footprints <span>$20 per person</span></li>
+        <li>Oldonyo Lengai Climb (Group) <span>$93.6 per person</span></li>
+        <li>Oldonyo Lengai Climb (Solo) <span>$123.6 per person</span></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="section-title">Entry & Conservation Fees</div>
+      <ul class="price-list">
+        <li>Gate Entry Fee <span>$35 per person</span></li>
+        <li>WMA Fee (Lodge Overnight) <span>$29.5 per person</span></li>
+        <li>WMA Fee (Camping Overnight) <span>$35.4 per person</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2023 Natron Adventures. All rights reserved.
+  </footer>
+</body>
+</html>
